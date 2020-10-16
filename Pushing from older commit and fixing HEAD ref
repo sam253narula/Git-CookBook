@@ -1,0 +1,45 @@
+If u have done a Git checkout <commit_id>
+
+and u make some code changes and now u dont want to reset your head to HEAD and remake those chanegs, instead u want to push these chanegs to git diirectly  use below
+ git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+    
+   ----------------------------------------------------
+   
+   Now your git log will look like below:
+   $ git log
+commit 1594e0f2ab3caf88ff855d6e090df74ac83d2500 (HEAD, origin/master)
+Author: sam253narula <samarthnarula253@gmail.com>
+Date:   Fri Oct 16 20:31:50 2020 +0530
+
+    ManyToMany Mapping
+
+commit 6d0299e7ae7ee77e102b715e31b769f5468e8402 (master)
+Author: sam253narula <samarthnarula253@gmail.com>
+Date:   Sat Oct 10 23:37:56 2020 +0530
+
+    OneToMany and ManyToOne Mapping
+
+commit bbdf8db849660038c22ec30216345f0cecdda8e5
+Author: sam253narula <samarthnarula253@gmail.com>
+Date:   Sat Oct 10 22:47:45 2020 +0530
+
+
+--------------------------------------------
+
+Now if u want to fix your last two commits then use below procedure
+
+$ git checkout master
+
+$ git pull
+
+Done it will be fixed
+
+
+
+
+
